@@ -71,42 +71,40 @@
         android:layout_height="wrap_content"
         android:text="Sở thích của bạn: " />
 
-    <RadioGroup
-        android:id="@+id/radgSoThich"
+    <CheckBox
+        android:id="@+id/checPhim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp">
+        android:layout_marginLeft="15dp"
+        android:text="Xem phim" />
 
-        <CheckBox
-            android:id="@+id/checPhim"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Xem phim" />
+    <CheckBox
+        android:id="@+id/checNhac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="Nghe nhạc" />
 
-        <CheckBox
-            android:id="@+id/checNhac"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nghe nhạc" />
+    <CheckBox
+        android:id="@+id/checCafe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="Đi cafe với bạn bè" />
 
-        <CheckBox
-            android:id="@+id/checCafe"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Đi cafe với bạn" />
+    <CheckBox
+        android:id="@+id/checNha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="Ở nhà một mình" />
 
-        <CheckBox
-            android:id="@+id/checNha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ở nhà một mình" />
-
-        <CheckBox
-            android:id="@+id/checBep"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Vào bếp nấu ăn" />
-    </RadioGroup>
+    <CheckBox
+        android:id="@+id/checBep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="Vào bếp nấu ăn" />
 
     <TextView
         android:id="@+id/textView5"

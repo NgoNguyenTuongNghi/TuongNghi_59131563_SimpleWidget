@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -16,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     String textXacNhan;
     EditText editTen, editNgaySinh, editSoThichKhac;
-    RadioGroup radgGioiTinh, radgSoThich;
+    RadioGroup radgGioiTinh;
+    CheckBox checPhim, checNhac, checCafe, checNha, checBep;
     Button buttXacNhan;
 
     @Override
@@ -31,7 +34,11 @@ public class MainActivity extends AppCompatActivity {
         editTen = findViewById(R.id.editTen);
         editNgaySinh = findViewById(R.id.editNgaySinh);
         radgGioiTinh = findViewById(R.id.radgGioiTinh);
-        radgSoThich = findViewById(R.id.radgSoThich);
+        checPhim = findViewById(R.id.checPhim);
+        checNhac = findViewById(R.id.checNhac);
+        checCafe = findViewById(R.id.checCafe);
+        checNha = findViewById(R.id.checNha);
+        checBep = findViewById(R.id.checBep);
         editSoThichKhac = findViewById(R.id.editSoThichKhac);
         buttXacNhan = findViewById(R.id.buttXacNhan);
     }
@@ -53,18 +60,18 @@ public class MainActivity extends AppCompatActivity {
             textXacNhan += "Nam" + "\n" + "Sở thích: ";
         else
             textXacNhan += "Nữ" + "\n" + "Sở thích: ";
-        switch (radgSoThich.getCheckedRadioButtonId()) {
-            case R.id.checPhim:
-                textXacNhan += "Xem phim";
-            case R.id.checNhac:
-                textXacNhan += "; Nghe nhạc";
-            case R.id.checCafe:
-                textXacNhan += "; Đi cà phê với bạn bè";
-            case R.id.checNha:
-                textXacNhan += "; Ở nhà một mình";
-            case R.id.checBep:
-                textXacNhan += "; Vào bếp nấu ăn";
-        }
+
+        if (checPhim.isChecked())
+            textXacNhan += "Xem phim; ";
+        if (checNhac.isChecked())
+            textXacNhan += "Nghe nhạc; ";
+        if (checCafe.isChecked())
+            textXacNhan += "Đi cà phê với bạn; ";
+        if (checNha.isChecked())
+            textXacNhan += "Ở nhà một mình; ";
+        if (checBep.isChecked())
+            textXacNhan += "Vào bếp nấu ăn; ";
+
         textXacNhan += editSoThichKhac.getText().toString();
         Toast.makeText(getApplicationContext(), textXacNhan, Toast.LENGTH_SHORT).show();
     }
